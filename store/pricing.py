@@ -7,7 +7,7 @@ def calculate_order_total(items):
         subtotal += item["price"] * item["quantity"]
 
     discount = get_seasonal_discount()
-    total = apply_discount(subtotal, discount)
+    total = apply_discount(subtotal, discount if discount is not None else 0)
     return round(total, 2)
 
 def get_seasonal_discount():
