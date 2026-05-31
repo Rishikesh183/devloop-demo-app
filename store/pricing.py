@@ -15,4 +15,4 @@ def get_seasonal_discount():
     active_seasons = []
     if active_seasons:
         return active_seasons[0]["discount"]
-    return None  # <-- this None flows into apply_discount and crashes
+    return 0
